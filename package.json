@@ -10,8 +10,7 @@
   },
   "dependencies": {
     "@libsql/client": "^0.17.0",
-    "agentation": "^2.2.1",
-    "lucide-react": "^0.575.0",
+"lucide-react": "^0.575.0",
     "motion": "^12.34.3",
     "next": "14.2.35",
     "react": "^18",
