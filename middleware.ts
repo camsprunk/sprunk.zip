@@ -15,7 +15,7 @@ export function middleware(req: NextRequest) {
 
   return new NextResponse('Unauthorized', {
     status: 401,
-    headers: { 'WWW-Authenticate': 'Basic realm="Griid", charset="UTF-8"' },
+    headers: { 'WWW-Authenticate': 'Basic realm="sprunk.zip", charset="UTF-8"' },
   });
 }
 

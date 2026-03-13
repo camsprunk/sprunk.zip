@@ -10,8 +10,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Griid',
-  description: 'Your personal bookmark grid',
+  title: 'sprunk.zip',
+  description: 'sprunk.zip',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

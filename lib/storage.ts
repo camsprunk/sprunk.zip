@@ -1,6 +1,6 @@
 import type { AppState } from './types';
 
-const STORAGE_KEY = 'griid_v1';
+const STORAGE_KEY = 'sprunk_v1';
 
 const DEFAULT_STATE: AppState = {
   tiles: [],
