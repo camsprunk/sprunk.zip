@@ -50,11 +50,15 @@ export default function Sidebar({
 
   return (
     <>
+      {/* ── Logo — single fixed element, always visible at all breakpoints ── */}
+      <div className="fixed top-4 left-5 z-50 select-none">
+        <FlowerLogo className="h-6 w-auto text-neutral-400" />
+      </div>
+
       {/* ── Desktop sidebar (hidden on mobile) ── */}
       <aside className="hidden md:flex w-[200px] flex-shrink-0 h-full flex-col overflow-y-auto px-5">
-        <div className="pt-6 pb-4">
-          <FlowerLogo className="h-6 w-auto text-neutral-400" />
-        </div>
+        {/* Spacer so nav clears the fixed logo above */}
+        <div className="pt-14" />
 
         <nav className="flex-1 space-y-0">
           <button
@@ -141,10 +145,6 @@ export default function Sidebar({
 
       {/* ── Mobile floating menu (hidden on md+) ── */}
       <div className="md:hidden">
-        {/* Logo — top left */}
-        <div className="fixed top-4 left-4 z-50 select-none">
-          <FlowerLogo className="h-6 w-auto text-neutral-400" />
-        </div>
         <motion.button
           onClick={() => setMobileOpen(v => !v)}
           className="fixed top-4 right-4 z-50 w-10 h-10 rounded-full flex items-center justify-center text-neutral-700"
@@ -202,10 +202,6 @@ export default function Sidebar({
                 exit={{ opacity: 0, scale: 0.95, y: -6 }}
                 transition={{ type: 'spring', stiffness: 400, damping: 25 }}
               >
-                <div className="pb-2">
-                  <FlowerLogo className="h-5 w-auto text-neutral-400" />
-                </div>
-
                 <nav className="space-y-0">
                   <button
                     className={navItemClass(activeFolderId === null)}

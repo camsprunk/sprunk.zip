@@ -8,6 +8,7 @@ import AddTileModal from '@/components/AddTileModal';
 import EditTileModal from '@/components/EditTileModal';
 import DragDropOverlay from '@/components/DragDropOverlay';
 import { motion, AnimatePresence } from 'motion/react';
+import { Plus } from 'lucide-react';
 
 export default function Page() {
   const { tiles, addTile, updateTile, deleteTile, mounted } = useTiles();
@@ -76,13 +77,13 @@ export default function Page() {
         {/* Floating add button */}
         <motion.button
           onClick={() => setIsModalOpen(true)}
-          className="fixed bottom-6 right-6 w-11 h-11 rounded-full bg-neutral-900 text-white text-lg flex items-center justify-center shadow-md hover:bg-neutral-700 transition-colors z-40"
+          className="fixed bottom-6 right-6 w-11 h-11 rounded-full bg-neutral-900 text-white flex items-center justify-center shadow-md hover:bg-neutral-700 transition-colors z-40"
           whileHover={{ scale: 1.08 }}
           whileTap={{ scale: 0.88 }}
           transition={{ type: 'spring', stiffness: 400, damping: 17 }}
           aria-label="Add tile"
         >
-          +
+          <Plus size={18} strokeWidth={2} />
         </motion.button>
       </main>
 
