@@ -8,7 +8,7 @@ export function middleware(req: NextRequest) {
     // decoded is "username:password" — take everything after the first colon
     const [username, ...rest] = decoded.split(':');
     const password = rest.join(':');
-    if (username === process.env.GRIID_USERNAME && password === process.env.GRIID_PASSWORD) {
+    if (username === process.env.SPRUNK_USERNAME && password === process.env.SPRUNK_PASSWORD) {
       return NextResponse.next();
     }
   }
